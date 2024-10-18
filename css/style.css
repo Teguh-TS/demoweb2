@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font: bold 14px Arial, sans-serif;
+}
+
+html {
+    height: 100%;
+    background: white;
+    background: radial-gradient(circle, #fff 20%, #ccc);
+    background-size: cover;
+}
+
+#calculator {
+    width: 333px;
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 20px 12px;
+    background: linear-gradient(#0757ce, #8bceec);
+    border-radius: 3px;
+    box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#screen {
+    float: right;
+    height: 40px;
+    width: 228px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+    font-size: 17px;
+    line-height: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-align: right;
+    letter-spacing: 1px;
+}
+
+.keys, .top {
+    overflow: hidden;
+}
+
+.keys span {
+    float: left;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    width: 66px;  
+    height: 36px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 7px 2px 0;
+    color: #888;
+    line-height: 36px;
+    text-align: center;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.keys span.operator {
+    background: rgb(171, 247, 171);
+}
+
+.keys span.eval {
+    background: #f1ff92;
+    box-shadow: 0px 4px #9da853;
+    color: #888e5f;
+}
+
+/* Penyesuaian khusus untuk tombol akar (√), modulus (%), dan pangkat (^) */
+.keys span.sqrt, .keys span.modulus, .keys span.power {
+    width: 66px; /* Pastikan lebar tombol konsisten */
+    margin-right: 7px; /* Jarak antar tombol tetap seragam */
+    margin-top: 15px;
+}
+
+.keys #clear{
+    margin-top: 15px;
+    color: white;
+    background: rgb(253, 189, 70);
+}
+
+.keys span.sqrt {
+    background: rgb(171, 247, 171); /* Warna yang sama dengan operator lainnya */
+}
+
+.keys span.modulus {
+    background: rgb(171, 247, 171);
+}
+
+.keys span.power {
+    background: rgb(171, 247, 171);
+}
+
+/* Hover effect untuk tombol √, %, ^ */
+.keys span.sqrt:hover, .keys span.modulus:hover, .keys span.power:hover {
+    background: #ffa07a; /* Warna hover */
+    color: white;
+    box-shadow: 0px 4px #d3545d;
+}
+
+.keys span:active {
+    box-shadow: 0px 0px #6b54d3;
+    top: 4px;
+}
+
